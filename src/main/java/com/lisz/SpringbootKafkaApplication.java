@@ -22,7 +22,7 @@ public class SpringbootKafkaApplication {
     }
 
     @KafkaListeners(@KafkaListener(topics = {"topic02"}))
-    @SendTo("topic03")
+    @SendTo("topic03")  // 将String返回值转发给topic03
     public String receive02(ConsumerRecord<String, String> record) {
         return record.value() + " --- lisz";
     }
