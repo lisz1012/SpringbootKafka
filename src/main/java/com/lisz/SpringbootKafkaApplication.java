@@ -14,7 +14,7 @@ import org.springframework.kafka.annotation.KafkaListeners;
 import org.springframework.messaging.handler.annotation.SendTo;
 
 import java.io.IOException;
-
+// 踩坑：用Unit test发消息可能收不到，直接用Application 这个class发
 @SpringBootApplication
 public class SpringbootKafkaApplication {
 
